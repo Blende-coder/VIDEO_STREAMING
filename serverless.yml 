@@ -1,0 +1,14 @@
+service: telegram-video-streamer
+
+provider:
+  name: netlify
+  runtime: nodejs14.x
+
+functions:
+  get-video-url:
+    handler: serverless/handler.handler
+    events:
+      - http:
+          path: get-video-url
+          method: get
+          cors: true
