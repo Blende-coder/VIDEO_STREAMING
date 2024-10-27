@@ -11,3 +11,11 @@ async function loadVideo(fileId) {
         console.error('Error loading video:', error);
     }
 }
+return {
+    statusCode: 200,
+    headers: {
+        "Access-Control-Allow-Origin": "*",  // Allows all origins, but you can restrict it to your domain
+        "Access-Control-Allow-Methods": "GET, OPTIONS",
+    },
+    body: JSON.stringify({ videoUrl }),
+};
