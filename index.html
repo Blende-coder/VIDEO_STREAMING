@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telegram Video Streaming</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Video Stream from Telegram</h1>
+    <h1>Stream Videos from Telegram</h1>
     <video id="videoPlayer" width="600" controls></video>
-    <script>
-        async function loadVideo(fileId) {
-            const response = await fetch(`https://api.telegram.org/bot5364371874:AAHBS_U_Kd2ZWCUT6ip1p7ft1lY8U0va8sc//getVideo?file_id=${BQACAgUAAyEFAASQm0wCAAMUZx6vn4V_HxDQp1xdFd_HpEcbhUgAAt0JAAIgAqhV02BEKR7-F1E2BA}`);
-            const { videoUrl } = await response.json();
-            document.getElementById('videoPlayer').src = videoUrl;
-        }
-        loadVideo('BQACAgUAAyEFAASQm0wCAAMUZx6vn4V_HxDQp1xdFd_HpEcbhUgAAt0JAAIgAqhV02BEKR7-F1E2BA');
-    </script>
+    <button onclick="loadVideo('BQACAgUAAyEFAASQm0wCAAMUZx6vn4V_HxDQp1xdFd_HpEcbhUgAAt0JAAIgAqhV02BEKR7-F1E2BA')">Load Video</button> <!-- Replace 'YOUR_FILE_ID' with actual Telegram file_id -->
+
+    <script src="script.js"></script>
 </body>
 </html>
