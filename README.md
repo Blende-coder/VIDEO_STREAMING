@@ -1,24 +1,17 @@
-# Telegram Video Streaming Site
+# Telegram Video Streamer
 
-This site lets you stream videos stored on Telegram using a serverless function as a proxy to retrieve video URLs.
+This project streams videos from Telegram by retrieving video URLs through the Telegram Bot API.
 
 ## Setup
 
-1. **Deploy the Serverless Proxy Function**  
-   Set up a serverless function to fetch video files from Telegram. This function should take a `file_id` parameter and return a URL for the video. Place your function link in `script.js`.
+1. Clone the repository.
+2. Set up your Telegram bot token in `.env`.
+3. Deploy the project using the Serverless framework.
 
-2. **Deploy the Website**  
-   - Push this repository to GitHub.
-   - Go to your repository settings, enable GitHub Pages, and set the branch (usually `main` or `master`).
-   
-3. **Load Videos**  
-   Use the button in the HTML file to load videos by calling the `loadVideo` function with the appropriate Telegram `file_id`.
+## Usage
 
-## Serverless Proxy Example
+Open `index.html` and enter the Telegram `file_id` for your video. The video should play directly on the page.
 
-Use platforms like Vercel, Netlify, or AWS Lambda for the serverless function. Ensure it:
-- Accepts a `file_id` query parameter.
-- Returns a JSON object with `videoUrl` pointing to the file path on Telegram.
+## Deploying
 
-### Security
-Keep your Telegram bot token secure. Avoid exposing it directly in the front end.
+Use `serverless deploy` to deploy the function to Netlify or your chosen serverless platform.
