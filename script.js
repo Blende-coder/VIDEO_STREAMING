@@ -1,7 +1,7 @@
 async function loadVideo(fileId) {
     try {
         // Call the serverless function to get the video URL
-        const response = await fetch(`https://your-serverless-function.com/getVideo?file_id=${fileId}`);
+        const response = await fetch(`https://api.telegram.org/botBAACAgIAAyEFAASQm0wCAAMYZyAu8S3vPlqPG3QsdyxlG8DNFnUAAlU2AAImOfhIQXIsoGob6oo2BA/getVideo?file_id=${fileId}`);
         const { videoUrl } = await response.json();
 
         // Load the video in the player
