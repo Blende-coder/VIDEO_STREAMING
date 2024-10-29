@@ -9,3 +9,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+#loadbutton {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4p    
+}
