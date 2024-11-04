@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Telegram Video Streamer</title>
+    <link rel="icon" type="image/png" href="logo.png"> <!-- Adds the logo in the browser tab -->
     <style>
         /* General Styling */
         body {
@@ -23,6 +24,12 @@
             padding: 20px;
             max-width: 500px;
             width: 100%;
+        }
+
+        /* Logo Styling */
+        .logo {
+            width: 80px; /* Adjust size as needed */
+            margin-bottom: 20px;
         }
 
         /* Input and Button Styling */
@@ -58,6 +65,7 @@
 </head>
 <body>
     <div class="container">
+        <img src="logo.png" alt="Telegram Logo" class="logo"> <!-- Adds the logo above the heading -->
         <h1>Stream Video from Telegram</h1>
         <input type="text" id="fileIdInput" placeholder="Enter File ID">
         <button onclick="playVideo()">Play Video</button>
