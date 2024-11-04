@@ -2,13 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Telegram Video</title>
+    <title>Telegram Video Streamer</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        /* Centered Content Container */
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* Input and Button Styling */
+        input[type="text"], button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Video Player Styling */
+        #videoPlayer {
+            margin-top: 20px;
+            display: none;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Stream Video from Telegram</h1>
-    <input type="text" id="fileIdInput" placeholder="Enter File ID">
-    <button onclick="playVideo()">Play Video</button>
-    <video id="videoPlayer" controls width="600" style="display:none;"></video>
-
+    <div class="container">
+        <h1>Stream Video from Telegram</h1>
+        <input type="text" id="fileIdInput" placeholder="Enter File ID">
+        <button onclick="playVideo()">Play Video</button>
+        <video id="videoPlayer" controls width="600"></video>
+    </div>
+    
     <script src="app.js"></script>
 </body>
+</html>
