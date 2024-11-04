@@ -17,7 +17,7 @@ async function playVideo() {
         }
     } else if (source === "drive") {
         // For Google Drive, construct the embed URL directly
-        videoPlayer.src = `https://drive.google.com/uc?export=preview&id=${fileId}`;
+        videoPlayer.src = `https://drive.google.com/uc?export=preview&id=1c5aDUpa_GCTHwxCh--U77iEYe1dr00kC`;
         videoPlayer.style.display = 'block';
     }
 }
