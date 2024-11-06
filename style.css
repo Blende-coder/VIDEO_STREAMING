@@ -14,6 +14,7 @@ body {
     font-family: Arial, sans-serif;
     position: relative;
     overflow: hidden;
+    color: white;
 }
 
 /* Background image with blur effect and zoom */
@@ -25,23 +26,28 @@ body::before {
     right: 0;
     bottom: 0;
     background: url('background.jpg') no-repeat center center;
-    background-size: 110%; /* Zoom in slightly to cover borders */
-    filter: blur(10px); /* Adjust the blur intensity */
+    background-size: cover; /* Cover the full viewport */
+    transform: scale(1.1); /* Slight zoom-in */
+    filter: blur(8px); /* Blur for frosted effect */
     z-index: -1; /* Make sure it stays behind other content */
-    opacity: 0.7; /* Optional: adjust opacity to make it lighter */
+    opacity: 0.8; /* Optional: adjust opacity for a darker effect */
 }
 
 /* Glassy container styling */
 #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    max-width: 600px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+    max-width: 500px;
+    width: 90%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glass effect */
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(15px); /* Blur the background inside the box */
-    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px); /* Blur the background inside the box */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
     position: relative;
     z-index: 1;
 }
@@ -64,7 +70,7 @@ h1 {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.7); /* Slightly opaque background */
