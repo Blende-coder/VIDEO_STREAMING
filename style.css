@@ -26,11 +26,11 @@ body::before {
     right: 0;
     bottom: 0;
     background: url('background.jpg') no-repeat center center;
-    background-size: cover; /* Cover the full viewport */
-    transform: scale(1.1); /* Slight zoom-in */
-    filter: blur(8px); /* Blur for frosted effect */
-    z-index: -1; /* Make sure it stays behind other content */
-    opacity: 0.8; /* Optional: adjust opacity for a darker effect */
+    background-size: cover;
+    transform: scale(1.1);
+    filter: blur(8px);
+    z-index: -1;
+    opacity: 0.8;
 }
 
 /* Glassy container styling */
@@ -42,12 +42,12 @@ body::before {
     max-width: 500px;
     width: 90%;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glass effect */
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(20px); /* Blur the background inside the box */
-    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     position: relative;
     z-index: 1;
 }
@@ -61,11 +61,19 @@ body::before {
 /* Title styling */
 h1 {
     font-size: 24px;
-    color: #ffffff; /* White text to contrast with background */
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
-/* Input and button styling */
+/* Input and button container */
+#inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Input field styling */
 #driveLinkInput {
     width: 100%;
     padding: 10px;
@@ -73,9 +81,10 @@ h1 {
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.7); /* Slightly opaque background */
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
+/* Play Button styling */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -91,6 +100,22 @@ button:hover {
     background-color: #2980b9;
 }
 
+/* Clear button styling */
+.clearButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clearButton:hover {
+    background-color: #e53935;
+}
+
 /* Video player styling */
 #videoPlayer {
     width: 100%;
@@ -99,5 +124,5 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: none; /* Initially hidden */
+    display: none;
 }
