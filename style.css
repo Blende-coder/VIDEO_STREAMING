@@ -7,16 +7,15 @@
 
 /* Body styling */
 body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
-    position: relative;
-    overflow: hidden;
-    color: white;
+    background: rgba(0, 0, 0, 0.7);
 }
-
 /* Background image with blur effect and zoom */
 body::before {
     content: "";
