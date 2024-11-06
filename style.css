@@ -107,13 +107,13 @@ button:hover {
 /* Clear button styling */
 .clearButton {
     width: 20%; /* Set width of the clear button */
-    padding: 12px;
     font-size: 16px;
     background-color: #3498db;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
