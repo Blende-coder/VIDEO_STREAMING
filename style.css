@@ -67,27 +67,25 @@ h1 {
     letter-spacing: 2px; /* Subtle spacing for a modern feel */
 }
 
-/* Input and button container */
+/* Input container for URL and clear button */
 #inputContainer {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Adjust space between the input field and the clear button */
     width: 100%;
+    margin-bottom: 15px;
 }
 
-/* Input Styling */
+/* Input field styling */
 #driveLinkInput {
-    width: 100%;
+    width: 80%; /* Set width to leave space for the clear button */
     padding: 12px;
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.3); /* Slightly transparent background */
+    background-color: rgba(255, 255, 255, 0.3);
     color: white;
-    font-weight: 400;
 }
-
 
 /* Buttons */
 button {
@@ -106,16 +104,16 @@ button:hover {
     background-color: #2980b9;
 }
 
-/* Clear Button */
+/* Clear button styling */
 .clearButton {
-    padding: 12px 24px;
+    width: 20%; /* Set width of the clear button */
+    padding: 12px;
     font-size: 16px;
-    background-color: #3498db;
+    background-color: #f44336;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
