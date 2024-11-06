@@ -16,16 +16,16 @@ body {
     overflow: hidden;
 }
 
-/* Background image with blur effect */
+/* Background image with blur effect and zoom */
 body::before {
     content: "";
     position: absolute;
-    top: -1;
-    left: -1;
-    right: -1;
-    bottom: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: url('background.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: 110%; /* Zoom in slightly to cover borders */
     filter: blur(10px); /* Adjust the blur intensity */
     z-index: -1; /* Make sure it stays behind other content */
     opacity: 0.7; /* Optional: adjust opacity to make it lighter */
