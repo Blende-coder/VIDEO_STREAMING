@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Video Stream</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    </head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Stream</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
     <div id="container">
@@ -15,12 +13,15 @@
         <img src="logo.png" alt="Logo" id="logo">
 
         <!-- Main Content -->
-        <h1>STREAM VIDEO <link rel="stylesheet" href="https://shorturl.at/oAlyR"></h1>
-        <div>
+        <h1>Stream Video</h1>
+
+        <!-- Input container for URL and clear button -->
+        <div id="inputContainer">
             <input type="text" id="driveLinkInput" placeholder="Enter Google Drive link or file ID">
-            <button onclick="playVideo()">Play Video</button>
-            <button onclick="clearInput()">Clear</button> <!-- Clear button -->
+            <button class="clearButton" onclick="clearInput()">Clear</button>
         </div>
+
+        <button onclick="playVideo()">Play Video</button>
 
         <!-- Video Player -->
         <video id="videoPlayer" controls>
@@ -30,12 +31,5 @@
     </div>
 
     <script src="app.js"></script>
-
-    <script>
-        // Function to clear the input field
-        function clearInput() {
-            document.getElementById("driveLinkInput").value = "";
-        }
-    </script>
 </body>
 </html>
