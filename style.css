@@ -71,7 +71,7 @@ h1 {
 #inputContainer {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adjust space between the input field and the clear button */
+    gap: 20px; /* Adjust space between the input field and the clear button */
     width: 100%;
     margin-bottom: 15px;
 }
