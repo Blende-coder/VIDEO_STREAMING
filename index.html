@@ -4,46 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Drive Video Stream</title>
-    <style>
-        /* Basic styles */
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-            background-color: #f3f3f3;
-        }
-        #videoPlayer {
-            width: 80%;
-            max-width: 800px;
-            margin-top: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            display: none; /* Hide initially */
-        }
-        #loadingScreen {
-            display: none; /* Initially hidden until loading */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Loading Screen (optional, can style this if needed) -->
-    <div id="loadingScreen">
-        <div class="spinner"></div>
-        <p>Loading, please wait...</p>
+    <div id="container">
+        <!-- Logo -->
+        <img src="logo.png" alt="Logo" id="logo">
+
+        <!-- Main Content -->
+        <h1>Stream Video from Google Drive</h1>
+        <input type="text" id="driveLinkInput" placeholder="Enter Google Drive link or file ID">
+        <button onclick="playVideo()">Play Video</button>
+
+        <!-- Video Player -->
+        <video id="videoPlayer" controls>
+            <source id="videoSource" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-
-    <!-- Main Content -->
-    <h1>Stream Video from Google Drive</h1>
-    <input type="text" id="driveLinkInput" placeholder="Enter Google Drive link or file ID" style="width: 80%; padding: 8px;">
-    <button onclick="playVideo()">Play Video</button>
-
-    <!-- Video Player -->
-    <video id="videoPlayer" controls>
-        <source id="videoSource" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 
     <script src="app.js"></script>
 </body>
