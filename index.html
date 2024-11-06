@@ -14,8 +14,11 @@
 
         <!-- Main Content -->
         <h1>Stream Video <link rel="stylesheet" href="https://shorturl.at/oAlyR"></h1>
-        <input type="text" id="driveLinkInput" placeholder="Enter Google Drive link or file ID">
-        <button onclick="playVideo()">Play Video</button>
+        <div>
+            <input type="text" id="driveLinkInput" placeholder="Enter Google Drive link or file ID">
+            <button onclick="playVideo()">Play Video</button>
+            <button onclick="clearInput()">Clear</button> <!-- Clear button -->
+        </div>
 
         <!-- Video Player -->
         <video id="videoPlayer" controls>
@@ -25,5 +28,12 @@
     </div>
 
     <script src="app.js"></script>
+
+    <script>
+        // Function to clear the input field
+        function clearInput() {
+            document.getElementById("driveLinkInput").value = "";
+        }
+    </script>
 </body>
 </html>
