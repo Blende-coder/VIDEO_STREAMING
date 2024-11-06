@@ -108,6 +108,7 @@ button:hover {
 .clearButton {
     width: 10%; /* Set width of the clear button */
     font-size: 16px;
+    align-content: center;
     background-color: #3498db;
     color: white;
     border: 1px solid #6b98cc;
