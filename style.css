@@ -78,7 +78,7 @@ h1 {
 
 /* Input field styling */
 #driveLinkInput {
-    width: 80%; /* Set width to leave space for the clear button */
+    width: 90%; /* Set width to leave space for the clear button */
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ddd;
@@ -106,7 +106,7 @@ button:hover {
 
 /* Clear button styling */
 .clearButton {
-    width: 20%; /* Set width of the clear button */
+    width: 10%; /* Set width of the clear button */
     font-size: 16px;
     background-color: #3498db;
     color: white;
