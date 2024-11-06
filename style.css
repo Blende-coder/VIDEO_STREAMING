@@ -57,11 +57,14 @@ body::before {
     margin-bottom: 20px;
 }
 
-/* Title styling */
+
+/* Title Styling */
 h1 {
-    font-size: 24px;
+    font-size: 36px; /* Larger, more impactful size */
+    font-weight: 600; /* Slightly bolder */
     color: #ffffff;
     margin-bottom: 20px;
+    letter-spacing: 2px; /* Subtle spacing for a modern feel */
 }
 
 /* Input and button container */
@@ -72,50 +75,56 @@ h1 {
     width: 100%;
 }
 
-/* Input field styling */
+/* Input Styling */
 #driveLinkInput {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 18px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly transparent background */
+    color: white;
+    font-weight: 400;
 }
 
-/* Play Button styling */
+
+/* Buttons */
 button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #2980b9;
 }
 
-/* Clear button styling */
+/* Clear Button */
 .clearButton {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     background-color: #f44336;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 
 .clearButton:hover {
     background-color: #e53935;
 }
 
-/* Video player styling */
+
+/* Video Player */
 #videoPlayer {
     width: 100%;
     max-width: 100%;
