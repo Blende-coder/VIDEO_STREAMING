@@ -1,23 +1,32 @@
-async function playVideo() {
-    const fileId = document.getElementById('fileIdInput').value;
-    const source = document.getElementById('sourceSelect').value;
-    const videoPlayer = document.getElementById('videoPlayer');
+function playVideo() {
+    // Get the user input
+    const userInput = document.getElementById("driveLinkInput").value;
 
-    if (source === "telegram") {
-        // For Telegram, call the backend API to get the video URL
-        try {
-            const response = await fetch(`/.netlify/functions/get-video-url?file_id=${fileId}`);
-            const data = await response.json();
+    // Regular expression to extract the file ID from a Google Drive URL
+    const fileIdRegex = /[-\w]{25,}/;
+    const match = userInput.match(fileIdRegex);
 
-            videoPlayer.src = data.videoUrl;
-            videoPlayer.style.display = 'block';
-        } catch (error) {
-            console.error('Error fetching Telegram video:', error);
-            alert("Failed to load Telegram video.");
-        }
-    } else if (source === "drive") {
-        // For Google Drive, construct the embed URL directly
-        videoPlayer.src = `https://drive.google.com/uc?export=preview&id=${fileId}`;
-        videoPlayer.style.display = 'block';
+    if (match) {
+        const fileId = match[0]; // Extracted file ID
+        const videoUrl = `https://drive.google.com/uc?export=preview&id=${fileId}`;
+
+        // Set the video source URL and display the player
+        const videoPlayer = document.getElementById("videoPlayer");
+        const videoSource = document.getElementById("videoSource");
+        videoSource.src = videoUrl;
+        videoPlayer.load(); // Reload the video player with the new source
+        videoPlayer.style.display = "block"; // Show the video player
+    } else {
+        alert("Please enter a valid Google Drive link or file ID.");
     }
 }
+
+window.addEventListener("load", function() {
+    // Add the 'hidden' class to fade out the loading screen
+    document.getElementById("loadingScreen").classList.add("hidden");
+    // Delay showing content to allow fade-out transition
+    setTimeout(() => {
+        document.getElementById("loadingScreen").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    }, 500); // Wait for the fade-out transition (500ms)
+});

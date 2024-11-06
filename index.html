@@ -2,83 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Telegram & Drive Video Streamer</title>
-    <link rel="icon" type="image/png" href="logo.png"> <!-- Favicon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Video Stream</title>
     <style>
-        /* General Styling */
+        /* Basic styles */
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f3f4f6;
-            color: #333;
-        }
-
-        /* Container */
-        .container {
             text-align: center;
             padding: 20px;
-            max-width: 500px;
-            width: 100%;
+            background-color: #f3f3f3;
         }
-
-        /* Logo */
-        .logo {
-            width: 80px;
-            margin-bottom: 20px;
-        }
-
-        /* Input and Button Styling */
-        input[type="text"], button, select {
-            padding: 10px;
-            margin: 10px 0;
-            width: 100%;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        button {
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            border: none;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Video Player */
         #videoPlayer {
+            width: 80%;
+            max-width: 800px;
             margin-top: 20px;
-            display: none;
-            max-width: 100%;
+            border: 1px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: none; /* Hide initially */
+        }
+        #loadingScreen {
+            display: none; /* Initially hidden until loading */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="logo.png" alt="Telegram Logo" class="logo">
-        <h1>Stream Video from Telegram or Google Drive</h1>
 
-        <select id="sourceSelect">
-            <option value="telegram">Telegram</option>
-            <option value="drive">Google Drive</option>
-        </select>
-
-        <input type="text" id="fileIdInput" placeholder="Enter File ID">
-        <button onclick="playVideo()">Play Video</button>
-
-        <video id="videoPlayer" controls width="600"></video>
+    <!-- Loading Screen (optional, can style this if needed) -->
+    <div id="loadingScreen">
+        <div class="spinner"></div>
+        <p>Loading, please wait...</p>
     </div>
-    
+
+    <!-- Main Content -->
+    <h1>Stream Video from Google Drive</h1>
+    <input type="text" id="driveLinkInput" placeholder="Enter Google Drive link or file ID" style="width: 80%; padding: 8px;">
+    <button onclick="playVideo()">Play Video</button>
+
+    <!-- Video Player -->
+    <video id="videoPlayer" controls>
+        <source id="videoSource" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <script src="app.js"></script>
 </body>
 </html>
