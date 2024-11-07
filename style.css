@@ -27,7 +27,6 @@ body::before {
     bottom: 0;
     background: url('background.jpg') no-repeat center center;
     background-size: cover; /* Ensures full coverage */
-    transform: scale(1.1); /* Optional: adds slight zoom */
     filter: blur(8px); /* Blurs for frosted effect */
     z-index: -1; /* Places background behind content */
     opacity: 0.8; /* Adjusts transparency for a darker effect */
