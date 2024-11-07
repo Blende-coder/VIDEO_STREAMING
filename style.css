@@ -133,3 +133,15 @@ button:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: none;
 }
+
+/* Footer styling */
+#footer {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: background for readability */
+    padding: 5px 10px;
+    border-radius: 5px;;
+}
